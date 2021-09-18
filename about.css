@@ -42,8 +42,8 @@ body {
 	height: 50px;
 	border: 1px solid #C7C7C7;
 	border-radius: 50%;
-	left: 0;
-	top: 0;
+	left: -100%;
+	top: -100%;
 	pointer-events: none;
 	transform: translate(-50%, -50%);
 	transition: .1s;
@@ -67,8 +67,8 @@ body {
 	height: 8px;
 	background-color: #d3d3d3;
 	border-radius: 50%;
-	left: 0;
-	top: 0;
+	left: -100%;
+	top: -100%;
 	pointer-events: none;
 	transform: translate(-50%, -50%);
 	transition: .15s;
