@@ -20,7 +20,6 @@ body {
 	width: 100%;
 	height: 100vh;
 	overflow: hidden;
-	cursor: none;
 }
 
 .container {
@@ -225,6 +224,11 @@ img {
 
 .site-menu {
 	display: flex;
+}
+
+a{
+	color: #C7C7C7;
+	text-decoration: none;
 }
 
 .menu-item {
