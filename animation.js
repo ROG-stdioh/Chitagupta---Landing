@@ -104,12 +104,6 @@ TweenMax.from(".site-logo", 1.6, {
     ease: Expo.easeInOut,
     delay: 0.6,
 });
-TweenMax.from(".showreel", 1.6, {
-    opacity: 0,
-    y: 40,
-    ease: Expo.easeInOut,
-    delay: 0.6,
-});
 TweenMax.staggerFrom(
     ".site-menu > div",
     1,
