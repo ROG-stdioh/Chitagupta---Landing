@@ -20,34 +20,42 @@
 html,
 body {
 	width: 100%;
-	height: 100vh;
-	background-color: #282020;
-	color: #C7C7C7;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background-color: #1A1A1A;
+	color: #C7C7C7;	
+	font-family: "MakLight";
 }
 
 .shapes {
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	left: 0;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: #1A1A1A;
-	font-family: "MakLight";
+	pointer-events: none;
 }
 
 .cursor{
 	position: fixed;
-	width: 50px;
-	height: 50px;
+	width: 3rem;
+	height: 3rem;
 	border: 1px solid #C7C7C7;
 	border-radius: 50%;
-	left: -100%;
-	top: -100%;
+	left: 50%;
+	top: -50%;
 	pointer-events: none;
 	transform: translate(-50%, -50%);
-	transition: .1s;
-	transition-timing-function: ease-out;
+	transition: all 0.1s ease-out;
 	animation: cursorAnim 1.5s infinite alternate;
 	animation-timing-function: ease-in-out;
 }
@@ -61,17 +69,48 @@ body {
 	}
 }
 
-.cursor2{
+.cursor2 {
 	position: fixed;
-	width: 8px;
-	height: 8px;
+	width: 0.5rem;
+	height: 0.5rem;
 	background-color: #d3d3d3;
 	border-radius: 50%;
-	left: -100%;
-	top: -100%;
+	left: 50%;
+	top: -50%;
 	pointer-events: none;
 	transform: translate(-50%, -50%);
-	transition: .15s;
+	transition: all 0.15s;
+}
+
+.about-navbar {
+	position: fixed;
+	z-index: 2000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	padding: 0 40px;
+	display: flex;
+	justify-content: space-between;
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	line-height: 100px;
+}
+
+a {
+	font-size: 1rem;	
+	color: #c7c7c7;
+	text-decoration: none;
+}
+
+.container {
+	position: relative;
+	z-index: 1000;
+	padding: 8rem 30% 0 12rem;
+}
+
+.header {
+	font-size: 6rem;
 }
 
 .container:hover ~ .cursor{
@@ -84,34 +123,7 @@ body {
 	opacity: .5;
 }
 
-.about-navbar {
-	position: fixed;
-	width: 100%;
-	height: 100px;
-	padding: 0 40px;
-	display: flex;
-	justify-content: space-between;
-	font-family: Arial, Helvetica, sans-serif !important;
-	text-transform: uppercase;
-	line-height: 100px;
-}
-
-a{
-	font-size: 1rem;	
-	color: #c7c7c7;
-	text-decoration: none;
-}
-
-h1 {
-	position: absolute;
-	top: 8rem;
-	left: 12rem;
-	width: 70%;
-	font-size: 6rem;
-	font-family: "MakLight";
-}
-
-.space{
+.space {
 	width: 2.5ch;
 	background-color: #C7C7C7;
 	height: 4px;
@@ -120,33 +132,29 @@ h1 {
 	opacity: 0.5;
 }
 
-.header .letter {
-	display: inline-block;
-	line-height: 1em;
-	font-family: "MakLight";
-}
-
-.contentPara{
+.contentPara {
 	font-family: 'IBM Plex Sans', sans-serif;
 	font-size: 1.625rem;
-	position: absolute;
-	top: 26rem;
-	left: 12rem;
 	display: flex;
 	flex-flow: column nowrap;
+	width: 100%;
+	height: 100%;
 	pointer-events: none;
 	opacity: 0.8;
+	padding-top: 5rem;
+	padding-right: 5rem;
 }
 
-.contentPara > p{
-	width: 45%;
+.contentPara > p {
 	margin: 1rem;
 }
 
 .overlay {
 	position: fixed;
+	z-index: 5000;
+	top: 0;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	background-color: #1A1A1A;
 }
 
@@ -164,54 +172,39 @@ h1 {
 	background: darkblue;
 	filter: grayscale(1);
 	opacity: 0.6;
+	background-size: cover;
+	transform: scale(1);
 }
 
 .img-1 {
-	transform: scale(1);
 	background: url(images/img-1.png) 50% 50% no-repeat;
-	background-size: cover;
 }
-
 .img-2 {
 	transform: scale(1.4);
 	background: url(images/img-2.png) 50% 50% no-repeat;
-	background-size: cover;
 }
-
 .img-3 {
 	transform: scale(1.2);
 	background: url(images/img-3.png) 50% 50% no-repeat;
-	background-size: cover;
 }
-
 .img-4 {
 	transform: scale(0.9);
 	background: url(images/img-4.png) 50% 50% no-repeat;
-	background-size: cover;
 }
-
 .img-5 {
 	transform: scale(1.2);
 	background: url(images/img-5.png) 50% 50% no-repeat;
-	background-size: cover;
 }
-
 .img-6 {
-	transform: scale(1);
 	background: url(images/img-6.png) 50% 50% no-repeat;
-	background-size: cover;
 }
-
 .img-7 {
 	transform: scale(1.1);
 	background: url(images/img-7.png) 50% 50% no-repeat;
-	background-size: cover;
 }
-
 .img-8 {
 	transform: scale(0.9);
 	background: url(images/img-8.png) 50% 50% no-repeat;
-	background-size: cover;
 }
 
 .navbar {
@@ -222,7 +215,6 @@ h1 {
 	display: flex;
 	justify-content: space-around;
 	color: #C7C7C7;
-	font-family: "MakLight";
 	text-transform: uppercase;
 }
 
@@ -231,8 +223,8 @@ h1 {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 800px;
-	height: 800px;
+	width: 50rem;
+	height: 50rem;
 	border: 1px solid rgba(132, 159, 255, 0.5);
 	border-radius: 100%;
 
@@ -243,8 +235,8 @@ h1 {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 800px;
-	height: 800px;
+	width: 50rem;
+	height: 50rem;
 	border: 1px solid rgb(180, 195, 255, 0.8);
 	border-radius: 100%;
 	filter: blur(4px);
@@ -268,8 +260,8 @@ h1 {
 	top: 70%;
 	left: 80%;
 	transform: translate(-50%, -50%);
-	width: 240px;
-	height: 240px;
+	width: 15rem;
+	height: 15rem;
 	background: #849FFF;
 	border-radius: 100%;
 	animation: shapeAnime 1.5s infinite alternate;
@@ -285,7 +277,6 @@ h1 {
 	height: 140px;
 	background: #4d547a;
 	border-radius: 100%;
-	z-index: 2;
 	animation: shapeAnime2 2s infinite alternate;
 	animation-timing-function: ease-in-out;
 }
@@ -305,5 +296,37 @@ h1 {
 	}
 	to{
 		top: 50%;
+	}
+}
+
+
+@media (max-width: 1136px) {
+	.container {
+		padding-right: 10%;
+	}
+	.header {
+		font-size: 4rem;
+	}
+	.contentPara {
+		font-size: 1.25rem;
+	}
+}
+
+@media (max-width: 900px) {
+	.container {
+		padding: 8rem 40px;
+	}
+	.header {
+		font-size: 2rem;
+	}
+	.contentPara {
+		font-size: 1rem;
+		padding-right: 0;
+	}
+	.circle-shape-2 {
+		opacity: 0.25;
+	}
+	.circle-shape-3 {
+		opacity: 0.25;
 	}
 }

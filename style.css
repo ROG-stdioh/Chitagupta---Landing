@@ -24,27 +24,27 @@ body {
 
 .container {
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background: #1A1A1A;
 	font-family: "MakLight";
+	pointer-events: none;
 }
 
 .cursor{
 	position: fixed;
-	width: 50px;
-	height: 50px;
+	width: 3rem;
+	height: 3rem;
 	border: 1px solid #C7C7C7;
 	border-radius: 50%;
-	left: -100%;
-	top: -100%;
+	left: 50%;
+	top: -50%;
 	pointer-events: none;
 	transform: translate(-50%, -50%);
-	transition: .1s;
-	transition-timing-function: ease-out;
+	transition: all 0.1s ease-out;
 	animation: cursorAnim 1.5s infinite alternate;
 	animation-timing-function: ease-in-out;
 }
@@ -58,17 +58,17 @@ body {
 	}
 }
 
-.cursor2{
+.cursor2 {
 	position: fixed;
-	width: 13px;
-	height: 13px;
+	width: 0.75rem;
+	height: 0.75rem;
 	background-color: #d3d3d3;
 	border-radius: 50%;
-	left:-100%;
-	top: -100%;
+	left: 50%;
+	top: -50%;
 	pointer-events: none;
 	transform: translate(-50%, -50%);
-	transition: .15s;
+	transition: all 0.15s;
 }
 
 .container:hover ~ .cursor{
@@ -83,12 +83,13 @@ body {
 
 .blocks {
 	display: flex;
-	font-size: 140px;
+	font-size: 8vw;
 	color: #C7C7C7;
+	user-select: none;
 }
 
 .circle-shape-thicc {
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -99,10 +100,8 @@ body {
 
 }
 
-
-
 .circle-shape {
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -127,7 +126,7 @@ body {
 }
 
 .circle-shape-2 {
-	position: absolute;
+	position: fixed;
 	top: 64%;
 	left: 80%;
 	transform: translate(-50%, -50%);
@@ -140,7 +139,7 @@ body {
 }
 
 .circle-shape-3 {
-	position: absolute;
+	position: fixed;
 	top: 30%;
 	left: 20%;
 	transform: translate(-50%, -50%);
@@ -173,11 +172,12 @@ body {
 
 .wrapper-img {
 	overflow: hidden;
-	position: absolute;
+	position: fixed;
 	top: 35% !important;
 	right: 18%;
 	width: 30%;
 	height: 90vh;
+	user-select: none;
 }
 
 img {
@@ -188,9 +188,8 @@ img {
 
 .box {
 	background: #1A1A1A;
-;
 	opacity: 1;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	bottom: 0;
 	right: 0;
@@ -211,6 +210,7 @@ img {
 
 .navbar {
 	position: fixed;
+	top: 0;
 	width: 100%;
 	height: 100px;
 	padding: 0 40px;
@@ -220,19 +220,20 @@ img {
 	text-transform: uppercase;
 	line-height: 100px;
 	color: #C7C7C7;
+	transition: all 0.15s ease-out;
 }
 
 .site-menu {
 	display: flex;
 }
 
-a{
+a {
 	color: #C7C7C7;
 	text-decoration: none;
 }
 
 @media (max-width: 900px) {
 	.navbar {
-		display: none;
+		top: 3rem;
 	}
 }

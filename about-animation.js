@@ -62,12 +62,7 @@ TweenMax.to(".overlay", 1.2, {
 	ease: Expo.easeOut,
 	delay: 5,
 });
-
-anime.timeline().add({
-	targets: ".header .letter .content",
-	translateY: [100, 0],
-	translateZ: 0,
-	easing: "easeOutExpo",
-	duration: 2000,
-	delay: (el, i) => 4800 + 40 * i,
+TweenMax.to(".shapes", 0, {
+	zIndex: 0,
+	delay: 5.2
 });
